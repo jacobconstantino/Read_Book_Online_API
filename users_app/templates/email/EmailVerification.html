@@ -1,0 +1,132 @@
+<html>
+<head>
+    <style>
+    .head{
+        background-color:black;
+          height: 75px;
+          color: #fff;
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          margin:0 auto;
+    }
+    .content{
+        margin-left:10;
+    }
+    .thanks{
+        margin-top:50px;
+        margin-left:10;
+
+    }
+    .title{
+        margin-left:35%;
+        margin-right: 35%;
+        
+    }
+    a{
+       
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    a:link {
+        color: white;
+    }
+
+    a:active {
+    color: white;
+    }
+    
+    body{
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    .greetings{
+        font-weight: bold;
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+    .table-center{
+        height: 80px;
+        width: 160px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    </style>
+
+</head>
+
+<body>
+<div class="head">
+    <!-- <label style="color: white; font-weight: bold; font-size: 25px; vertical-align: middle">WELCOME TO READ BOOK ONLINE!</label> -->
+
+</div>
+
+<div class="title">
+</div>
+
+<div class="content">
+
+    <table style="margin-top:10px; width: 100%">
+        <tr>
+            <td class="table-center"> <span style="font-weight:bold; font-size: 24px">Email Confirmation</span></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr><tr></tr>
+        <tr>
+            <td class="greetings"> Hey {{first_name}},</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr><tr></tr>
+        <tr>
+            <td>You're almost ready to start enjoying Read Book Online. To complete your registration, please click the button below to activate your account.</td>
+        </tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr>Thank you for registering at Read Book Online.</tr>
+        <tr></tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr class='table-center'> 
+            <td><a style="color: white;width: 30%;" href="http://127.0.0.1:8000/verify_user/{{data}}">Verify Email</a></td>
+        </tr>
+    </table>
+
+        <!-- <p class="greetings"> 
+            Hey {{first_name}},
+
+        </p>
+        <p>
+            You're almost ready to start enjoying Read Book Online. To complete your registration, please click the button below to activate your account.
+        </p>
+
+        <p>
+            Thank you for registering at Read Book Online. 
+        </p>
+
+        <a style="color: white" href="http://127.0.0.1:8000/verify_user/{{data}}">Verify Email</a> -->
+
+
+</div>
+
+
+
+<!-- <div class="thanks"> 
+<span> Thanks, </span>
+<br>
+<span> Read Book Online Team </span>
+</div> -->
+</body>
+
+</html>
