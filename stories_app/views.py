@@ -7,8 +7,15 @@ from .serializers import StoriesSerializer
 from bson.objectid import ObjectId
 # Create your views here.
 import jwt
+import boto3
+from django.core.files.storage import FileSystemStorage
+from rest_framework.parsers import MultiPartParser, FormParser
+from botocore.parsers import JSONParser
+from basemodels.helper import s3_uploader
+
 
 class StoriesViewApi(APIView):
+    parser_classes = (MultiPartParser, FormParser, JSONParser)
     
     def get(self, request):
 
@@ -26,15 +33,18 @@ class StoriesViewApi(APIView):
         # else:
         #     return Response("No Access Token", status = HTTP_401_UNAUTHORIZED)
 
-    def post(self, request):
+    def post(self, request, format=None):
         data = request.data['token'] 
 
         parse_token = jwt.decode(data, algorithms='HS256', options={'verify_signature': False})
-
+        
+        jacob = s3_uploader(request.FILES['files'])
+       
+        exit()
         # token_auth = Helper.TokenAuthentication(data)
 
         # if token_auth is True:
-
+       
         Users_data = {
             "story_cover": parse_token['story_cover'] , 
             "type": parse_token['type'],

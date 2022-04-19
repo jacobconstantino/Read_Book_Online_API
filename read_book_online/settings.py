@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'users_app',
-    'stories_app'
+    'stories_app',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -157,6 +158,15 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
 
-
+#facebook login
 SOCIAL_AUTH_FACEBOOK_KEY = '968658674048569'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'd8b8b104f2ae06ce2a36d3713e6a1656'  # App Secret
+
+
+#amazon s3
+AWS_ACCESS_KEY_ID = 'AKIAXRGJ5FX7Z3GQ4CUW'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME ='read-online-book'
+# AWS_S3_ENDPOINT_URL = 'read-online-book.s3.ap-south-1.amazonaws.com'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL  = None
